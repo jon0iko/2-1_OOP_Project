@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" style="-fx-background-color: eda8ad;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.salon.AppointmentController">
+   <children>
+      <HBox layoutX="166.0" layoutY="14.0" prefHeight="64.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="78.0" prefWidth="214.0">
+               <children>
+                  <Text fill="#934444" layoutX="25.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tash Salon" wrappingWidth="148.8000610351562">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Region prefHeight="200.0" prefWidth="200.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="66.0" prefWidth="376.0" spacing="10.0">
+               <children>
+                  <Hyperlink onAction="#servicesButtonfunction" prefHeight="24.0" prefWidth="94.0" style="-fx-font-weight: 700;" text="Services" textFill="#3b4a65" />
+                  <Hyperlink prefHeight="22.0" prefWidth="181.0" style="-fx-font-weight: 700;" text="Book an appointment" textFill="#3b4a65" underline="true" />
+                  <Hyperlink onAction="#profileButtonfunction" prefHeight="22.0" prefWidth="91.0" style="-fx-font-weight: 700;" text="Profile" textFill="#3b4a65" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <Text fill="#934444" layoutX="230.0" layoutY="127.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Book an appointment">
+         <font>
+            <Font size="26.0" />
+         </font>
+      </Text>
+      <FontAwesomeIcon fill="#934444" glyphName="CALENDAR" layoutX="189.0" layoutY="127.0" size="2em" />
+      <VBox layoutX="240.0" layoutY="182.0" prefHeight="157.0" prefWidth="220.0" spacing="10.0">
+         <children>
+            <ComboBox fx:id="CategoryBox" onAction="#CategoryBoxfunction" prefHeight="26.0" prefWidth="220.0" promptText="Select Category" />
+            <ComboBox fx:id="ServiceBox" prefHeight="26.0" prefWidth="220.0" promptText="Select Service" />
+            <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="220.0" promptText="Select a date" />
+            <ComboBox fx:id="stylistBox" prefWidth="220.0" promptText="Select a stylist" />
+         </children>
+      </VBox>
+      <Button layoutX="298.0" layoutY="378.0" mnemonicParsing="false" onAction="#confirmButtonfunction" style="-fx-background-color: #914443; -fx-border-radius: 30; -fx-background-radius: 30; -fx-padding: 10px 24px 10px 24px;" text="Confirm" textFill="WHITE">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></Button>
+   </children>
+</AnchorPane>

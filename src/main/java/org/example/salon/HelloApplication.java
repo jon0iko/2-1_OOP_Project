@@ -4,9 +4,10 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
-
+import org.example.salon.Database.DatabaseConnector;
 import java.io.IOException;
 import java.sql.Connection;
+
 
 public class HelloApplication extends Application {
     @Override
@@ -19,9 +20,9 @@ public class HelloApplication extends Application {
             System.out.println("Failed to establish connection.");
         }
 
-        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("hello-view.fxml"));
-        Scene scene = new Scene(fxmlLoader.load(), 320, 240);
-        stage.setTitle("Rizv not cutie");
+        FXMLLoader fxmlLoader = new FXMLLoader(HelloApplication.class.getResource("login-view.fxml"));
+        Scene scene = new Scene(fxmlLoader.load(), 700, 500);
+        stage.setTitle("TASH Salon");
         stage.setScene(scene);
         stage.show();
     }

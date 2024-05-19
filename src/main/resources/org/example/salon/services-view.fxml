@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="700.0" prefWidth="800.0" style="-fx-background-color: eda8ad;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.salon.ServicesController">
+    <children>
+        <HBox prefHeight="100.0" prefWidth="200.0" />
+        <HBox layoutY="6.0" prefHeight="65.0" prefWidth="800.0">
+            <children>
+                <AnchorPane prefHeight="64.0" prefWidth="119.0">
+                    <children>
+                        <Text fill="#934444" layoutX="53.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tash Salon" wrappingWidth="175.80001831054688">
+                            <font>
+                                <Font name="System Bold" size="24.0" />
+                            </font>
+                        </Text>
+                    </children>
+                </AnchorPane>
+                <Region prefHeight="64.0" prefWidth="600.0" HBox.hgrow="ALWAYS" />
+                <HBox alignment="CENTER" prefHeight="66.0" prefWidth="850.0" spacing="10.0">
+                    <children>
+                        <Hyperlink prefHeight="24.0" prefWidth="72.0" style="-fx-font-weight: 700;" text="Services" textFill="#3b4a65" underline="true" />
+                        <Hyperlink onAction="#appointmentButtonfunction" style="-fx-font-weight: 700;" text="Book a appointment" textFill="#3b4a65" />
+                        <Hyperlink onAction="#profileButtonfunction" style="-fx-font-weight: 700;" text="Profile" textFill="#3b4a65" />
+                    </children>
+                </HBox>
+            </children>
+        </HBox>
+        <VBox alignment="CENTER" layoutX="53.0" layoutY="100.0" prefHeight="555.0" prefWidth="628.0" spacing="10.0">
+            <children>
+                <VBox prefHeight="180.0" prefWidth="628.0">
+                    <children>
+                        <Label prefHeight="16.0" prefWidth="64.0" text="Hair" textFill="#934444">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="140.0" prefWidth="628.0" spacing="44.0">
+                            <children>
+                                <AnchorPane prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Hair Cut">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 900 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Hair Wash">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 700 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="140.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="140.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Hair Color">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 5000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="180.0" prefWidth="628.0">
+                    <children>
+                        <Label prefHeight="16.0" prefWidth="64.0" text="Spa" textFill="#934444">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="141.0" prefWidth="628.0" spacing="44.0">
+                            <children>
+                                <AnchorPane prefHeight="141.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="141.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Full Body Massage">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 7000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="141.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="141.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Facial">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 2000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="141.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="141.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Luxurious Spa">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 10000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+                <VBox prefHeight="154.0" prefWidth="628.0">
+                    <children>
+                        <Label prefHeight="26.0" prefWidth="200.0" text="Beauty" textFill="#934444">
+                            <font>
+                                <Font size="22.0" />
+                            </font>
+                        </Label>
+                        <HBox prefHeight="136.0" prefWidth="628.0" spacing="44.0">
+                            <children>
+                                <AnchorPane prefHeight="136.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="136.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Manicure">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 1000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="136.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="136.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Pedicure">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 1000 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                                <AnchorPane prefHeight="136.0" prefWidth="200.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+                                    <children>
+                                        <VBox alignment="CENTER" prefHeight="136.0" prefWidth="200.0" spacing="10.0">
+                                            <children>
+                                                <Label text="Makeover">
+                                                    <font>
+                                                        <Font size="28.0" />
+                                                    </font>
+                                                </Label>
+                                                <Label text="Price: 2500 BDT" />
+                                                <Button text="See More" />
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </AnchorPane>
+                            </children>
+                        </HBox>
+                    </children>
+                </VBox>
+            </children>
+        </VBox>
+    </children>
+</AnchorPane>

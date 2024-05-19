@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIcon?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Region?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane prefHeight="615.0" prefWidth="700.0" style="-fx-background-color: eda8ad;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.salon.ProfileController2">
+   <children>
+      <HBox layoutX="166.0" layoutY="14.0" prefHeight="64.0" prefWidth="600.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <AnchorPane prefHeight="64.0" prefWidth="119.0">
+               <children>
+                  <Text fill="#934444" layoutX="31.0" layoutY="40.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tash Salon" wrappingWidth="215.8000259399414">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+            <Region prefHeight="64.0" prefWidth="286.0" HBox.hgrow="ALWAYS" />
+            <HBox alignment="CENTER" prefHeight="64.0" prefWidth="650.0" spacing="10.0">
+               <children>
+                  <Hyperlink onAction="#scheduleButtonfunction" prefHeight="24.0" prefWidth="79.0" style="-fx-font-weight: 700;" text="Schedule" textFill="#3b4a65" />
+                  <Hyperlink prefHeight="22.0" prefWidth="61.0" style="-fx-font-weight: 700;" text="Profile" textFill="#3b4a65" underline="true" />
+                  <Hyperlink layoutX="138.0" layoutY="30.0" onAction="#logoutButtonfunction" prefHeight="24.0" prefWidth="122.0" style="-fx-font-weight: 700;" text="Logout" textFill="#3b4a65" />
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+      <AnchorPane layoutX="123.0" layoutY="64.0" prefHeight="230.0" prefWidth="454.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+         <children>
+            <Text fill="#934444" layoutX="186.0" layoutY="41.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile Info">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#934444" glyphName="USER" layoutX="150.0" layoutY="43.0" size="2em" />
+            <VBox layoutX="32.0" layoutY="67.0" prefHeight="99.0" prefWidth="390.0" spacing="6.0">
+               <children>
+                  <HBox prefHeight="10.0" prefWidth="390.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Username : ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="usernameLabel" prefHeight="22.0" prefWidth="177.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="390.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Full Name : ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="nameLabel" prefHeight="22.0" prefWidth="255.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="390.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Phone : ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="numberLabel" prefHeight="22.0" prefWidth="243.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="10.0" prefWidth="390.0">
+                     <children>
+                        <Label style="-fx-font-weight: bold;" text="Email : ">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="emailLabel" prefHeight="22.0" prefWidth="300.0">
+                           <font>
+                              <Font size="18.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox alignment="CENTER_LEFT" prefHeight="26.0" prefWidth="343.0" />
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="123.0" layoutY="326.0" prefHeight="230.0" prefWidth="454.0" style="-fx-background-color: white; -fx-background-radius: 10; -fx-border-radius: 10; -fx-padding: 15; -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.20), 7, 0.5, 0, 2); -fx-border-color: #e0e0e0;">
+         <children>
+            <Text fill="#934444" layoutX="147.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Change Password">
+               <font>
+                  <Font size="22.0" />
+               </font>
+            </Text>
+            <FontAwesomeIcon fill="#934444" glyphName="KEY" layoutX="111.0" layoutY="44.0" size="2em" />
+            <VBox layoutX="71.0" layoutY="72.0" prefHeight="87.0" prefWidth="313.0" spacing="9.0">
+               <children>
+                  <PasswordField fx:id="currentPass" promptText="Current Password" style="-fx-background-color: transparent; -fx-border-color: #934444; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="newPass" promptText="New Password" style="-fx-background-color: transparent; -fx-border-color: #934444; -fx-border-width: 0px 0px 2px 0px;" />
+                  <PasswordField fx:id="confirmPass" promptText="Confirm New Password" style="-fx-background-color: transparent; -fx-border-color: #934444; -fx-border-width: 0px 0px 2px 0px;" />
+               </children>
+            </VBox>
+            <Button layoutX="180.0" layoutY="178.0" mnemonicParsing="false" onAction="#submitButtonfunction" style="-fx-background-color: #914443; -fx-border-radius: 30; -fx-background-radius: 30; -fx-padding: 10px 24px 10px 24px;" text="Submit" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
