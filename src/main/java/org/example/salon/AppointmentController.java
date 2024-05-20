@@ -12,8 +12,11 @@ import org.example.salon.Database.DatabaseConnector;
 import org.example.salon.Database.Model.*;
 import java.net.URL;
 import java.sql.Date;
+import java.sql.Time;
 import java.time.LocalDate;
+import java.time.LocalTime;
 import java.time.ZoneId;
+import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.ResourceBundle;
 
@@ -26,10 +29,17 @@ public class AppointmentController implements Initializable {
     ComboBox<String> CategoryBox, ServiceBox, stylistBox;
     @FXML
     DatePicker datePicker;
+    @FXML
+    private ComboBox<String> timeComboBox;
 
     @Override
     public void initialize(URL url, ResourceBundle resourceBundle) {
         CategoryBox.setItems(FXCollections.observableArrayList("Hair", "Spa", "Beauty"));
+        timeComboBox.setItems(FXCollections.observableArrayList(
+                "09:00", "09:30", "10:00", "10:30", "11:00", "11:30",
+                "12:00", "12:30", "13:00", "13:30", "14:00", "14:30",
+                "15:00", "15:30", "16:00", "16:30", "17:00", "17:30", "18:00"
+        ));
         stylists = new ArrayList<>();
         stylists = DatabaseConnector.getEmployees();
         ObservableList<String> list = FXCollections.observableArrayList();
@@ -67,6 +77,16 @@ public class AppointmentController implements Initializable {
         return s;
     }
 
+    public static Time setTime(String timeString) {
+        if (timeString == null) {
+            showDialog("You must select a suitable time");
+        }
+        LocalTime time = LocalTime.parse(timeString, DateTimeFormatter.ofPattern("HH:mm"));
+        Time sqlTime = Time.valueOf(time);
+
+        return sqlTime;
+    }
+
     public void confirmButtonfunction(ActionEvent event) {
 
         User stylist = null;
@@ -87,20 +107,23 @@ public class AppointmentController implements Initializable {
                 break;
             }
         }
+
+        Time t = setTime(timeComboBox.getValue());
         double price = s.getPrice();
         Date d = convertLocalDateToDate(datePicker.getValue());
-        Appointment apnmnt = new Appointment(Auth.getUser(), stylist, s, d, generator.generateCurrentTime());
+        Appointment apnmnt = new Appointment(Auth.getUser(), stylist, s, d, t);
         DatabaseConnector.addAppointment(apnmnt);
-        loyaltyPoints(price);
-        showDialog("Appointment Added!");
+        int points = loyaltyPoints(price);
+        showDialog("Appointment Added! You earned "+Integer.toString(points)+" points.");
         Auth.openPage("appointment-view", event);
 
     }
 
-    public void loyaltyPoints(double price) {
+    public int loyaltyPoints(double price) {
         int points = LoyaltyProgram.calculatePoints(price);
         DatabaseConnector.updateUserPoints(Auth.getUser().getUserName(), points);
         Auth.setUser(Auth.getUser().getUserName());
+        return points;
     }
 
     public void servicesButtonfunction(ActionEvent event) {
@@ -111,7 +134,7 @@ public class AppointmentController implements Initializable {
         Auth.openPage("profile-view", event);
     }
 
-    public void showDialog(String m) {
+    public static void showDialog(String m) {
         Alert alert = new Alert(Alert.AlertType.INFORMATION);
         alert.setContentText(m);
         alert.showAndWait();

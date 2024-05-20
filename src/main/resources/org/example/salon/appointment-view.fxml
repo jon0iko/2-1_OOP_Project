@@ -47,6 +47,7 @@
             <ComboBox fx:id="CategoryBox" onAction="#CategoryBoxfunction" prefHeight="26.0" prefWidth="220.0" promptText="Select Category" />
             <ComboBox fx:id="ServiceBox" prefHeight="26.0" prefWidth="220.0" promptText="Select Service" />
             <DatePicker fx:id="datePicker" prefHeight="26.0" prefWidth="220.0" promptText="Select a date" />
+            <ComboBox fx:id="timeComboBox" prefWidth="220.0" promptText="Select a time" />
             <ComboBox fx:id="stylistBox" prefWidth="220.0" promptText="Select a stylist" />
          </children>
       </VBox>
